@@ -6,6 +6,10 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+/**
+ * Security configuration with user setup.
+ */
+
 @Configuration
 public class SecurityConfiguration {
     @Bean
