@@ -54,17 +54,20 @@
         {
             var name = document.getElementById("username").value
             var pwd = document.getElementById("psw").value
+            /*
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", "http://localhost:8080/user/add?name=" + name + "&password=" + pwd, false); // false for synchronous request
+            xmlHttp.open( "GET", "http://localhost:8080/user/data?username=" + name + "&pwd=" + pwd, false); // false for synchronous request
             xmlHttp.send( null );
-            window.location.href = "http://localhost:8080/user/login"
+            return xmlHttp.responseText;
+             */
+            window.location.href = "http://localhost:8080/user/data?username=" + name + "&pwd=" + pwd
         }
     </script>
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body>
 <div class="container">
-    <h1>Register</h1>
+    <h1>Login</h1>
     <hr>
 
     <label for="username"><b>Username</b></label>
@@ -73,9 +76,8 @@
     <label for="psw"><b>Password</b></label>
     <input id="psw" name="psw" placeholder="Enter Password" required type="password">
 
-    <button class="registerbtn" type="submit", onclick="httpGet()">Register</button>
+    <button class="loginbtn" type="submit", onclick="httpGet()">Login</button>
 </div>
 
-</div>
 </body>
 </html>
